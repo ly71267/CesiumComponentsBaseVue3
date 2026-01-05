@@ -1,0 +1,55 @@
+// 这是一个有关地图配置的json对象
+{
+  "mapUrl": "http://192.168.2.3:5173", //地图的底图的url地址
+  // cesium地图的配置项
+  "cesiumConfig": {
+    // 视图配置
+    "viewerConfig": {
+      // 是否显示基础图层选择器
+      "baseLayerPicker": false,
+      // 是否显示时间轴组件
+      "timeline": false,
+      // 是否显示动画组件
+      "animation": false,
+      // 是否显示场景模式选择组件
+      "sceneModePicker": false,
+      // 是否显示全屏按钮
+      "fullscreenButton": false,
+      // 是否显示VR按钮
+      "vrButton": false,
+      // 是否显示地名查找组件
+      "geocoder": false,
+      // 是否显示投影切换组件
+      "projectionPicker": false,
+      // 是否显示导航帮助按钮
+      "navigationHelpButton": false,
+      // 是否显示主页按钮
+      "homeButton": false
+    },
+    // 相机配置
+    "cameraConfig": {
+      "destination": [0, 0, 0], // 经度, 纬度, 高度
+      "orientation": {
+        "heading": 0.0, // 偏航角（东）
+        "pitch": -90.0, // 俯仰角（下）
+        "roll": 0.0 // 翻滚角（无）
+      }
+    },
+    // 光源配置
+    "lightSourceConfig": {
+      // 调整大气亮度
+      "brightnessShift": 0.125,
+      // 是否启用光照效果
+      "enableLighting": true
+    },
+    // 性能优化配置
+    "performanceConfig": {
+      // 启用地形深度测试，提高渲染质量但可能影响性能
+      "depthTestAgainstTerrain": true,
+      // 设置最大渲染时间变化，避免长时间渲染导致的应用冻结或卡顿
+      "maximumRenderTimeChange": 0.01
+    }
+  },
+  // leaflet的配置项 目前暂不支持
+  "leafletConfig": {}
+}
